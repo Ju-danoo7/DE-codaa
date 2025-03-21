@@ -1,0 +1,193 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif, 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background-color: hsl(148, 38%, 91%);
+    padding: 2rem 1rem;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    background-color: white;
+    border-radius: .4rem;
+    box-shadow: 0 0 1px 0 grey;
+}
+.popup{
+    display: none;
+    position: absolute;
+    background-color: #2b4246;
+    padding: 1rem;
+    border-radius: .5rem;
+    color: white;
+    font-size: .8rem;
+    top:.2rem;
+    z-index: 10;
+    /* right: 33rem; */
+}
+.popup .pop{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.pop svg{
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+.popup p{
+    margin-top: .8rem;
+    font-size: .7rem;
+    font-weight: 500;
+}
+input{
+    cursor: pointer;
+}
+form input:focus{
+    outline: none;
+}
+form h1{
+    font-size: 1.7rem;
+    margin-bottom: 2rem;
+}
+
+form label{
+    display: inline-block;
+    margin-top: .5rem;
+    margin-bottom: .6rem;
+    font-size: .8rem;
+}
+form .name{
+    padding: .3rem;
+    padding-left: 1rem;
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: .3rem;
+    border: 1px solid gray;
+    margin-bottom: .2rem;
+}
+.error{
+    font-size: .7rem;
+    color: rgb(241, 121, 121);
+    margin-top: .2rem;
+    /* display: none; */
+    visibility: hidden;
+}
+
+.showError{
+    visibility: visible;
+}
+form .query{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+form .query .span{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: .5rem;
+    height: 2.5rem;
+    border: 1px solid grey;
+    padding-left:  .5rem;
+    max-width: 15rem;
+    border-radius: .4rem;
+}
+
+form #textarea{
+    margin-bottom: 1rem;
+}
+form textarea{
+    border: 1px solid grey;
+    border-radius: .4rem;
+    width: 15rem;
+    min-height: 15rem;
+    padding: .5rem;
+    outline: none;
+}
+form .consent{
+    /* display: flex; */
+    align-items: center;
+    margin-bottom: .2rem;
+    gap: 1.1rem;
+    max-width: 15rem;
+}
+form .consent input{
+    vertical-align: middle;
+    margin-right: .4rem;
+}
+form .consent span{
+    font-size: .8rem;
+}
+.label{
+    font-size: .8rem;
+    /* margin-top: 1rem; */
+}
+
+form button{
+    width: 15rem;
+    background-color: hsl(169, 82%, 27%);
+    border: none;
+    height: 2.5rem;
+    border-radius: .4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    margin-top: 1rem;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0;
+    pointer-events: none;
+}
+.active{
+    opacity: .3;
+    pointer-events: all;
+    cursor: pointer;
+}
+@media (min-width: 600px) {
+    body{
+        padding: 4rem 2.5rem;
+    }
+    .main{
+        max-width: 50rem;
+    }
+     form #names{
+        display: flex;
+        gap: 1rem;
+    }
+    form #email{
+        width: 31rem;
+    }
+    form .query{
+        flex-direction: row;
+        gap: .5rem;
+    }
+    form .query .span{
+        width: 15rem;
+    }
+    form textarea{
+        width: 31rem;
+        min-height: 8rem;
+    }
+    form .consent{
+        max-width: 30rem;
+    }
+    form button{
+        width: 31rem;
+    }
+}

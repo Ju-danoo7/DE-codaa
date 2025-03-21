@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Form" content="register, contact form">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-Form javaScript project</title>
+    <link rel="stylesheet" href="design.css">
+    <script src="design.js" defer></script>
+</head>
+
+<body>
+    <div id="main">
+        <div class="main">
+            <section class="popup">
+                <div class="pop">
+                    <span id="check"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none"
+                            viewBox="0 0 18 18">
+                            <path fill="#2b4246"
+                                d="M16.5 0h-15A1.5 1.5 0 0 0 0 1.5v15A1.5 1.5 0 0 0 1.5 18h15a1.5 1.5 0 0 0 1.5-1.5v-15A1.5 1.5 0 0 0 16.5 0Zm-3.22 7.28-5.25 5.25a.748.748 0 0 1-1.06 0l-2.25-2.25a.75.75 0 1 1 1.06-1.06l1.72 1.72 4.72-4.72a.751.751 0 0 1 1.06 1.06Z" />
+                        </svg></span>
+                    <span>Message sent!</span>
+                </div>
+                <p>Thanks for completing the form. We'll be in touch soon!</p>
+            </section>
+            <div id="form">
+                <form name="signUp-form" action="#" autocomplete="off">
+                    <h1>Contact Us</h1>
+                    <div id="names">
+                        <section>
+                            <label for="FirstName" class="label"><span>First Name</span> <span>*</span></label><br>
+                            <input type="text" name="FirstName" class="name first" id="FirstName"><br>
+                            <p id="many" class="error"></p>
+
+                        </section>
+                        <section>
+                            <label for="LastName" class="label"><span>Last Name</span> <span>*</span></label><br>
+                            <input type="text" name="LastName" class="name last" id="LastName"><br>
+                            <p class="error"></p>
+                        </section>
+
+                    </div>
+                    <section>
+                        <label for="email" class="label"><span>Email Address</span> <span>*</span></label><br>
+                        <input type="email" name="email" class="name mail" id="email"><br>
+                        <p class="error"></p><br><br>
+                    </section>
+
+                    <section class="label">
+                        <p>Query Type *</p><br>
+                        <section class="query">
+                            <section class="span radioSection">
+                                <input type="radio" name="queryType" class="radio one"><label
+                                    for="General-enquiry">General
+                                    Enquiry</label><br>
+                            </section><br>
+                            <section class="span radioSection">
+                                <input type="radio" name="queryType" class="radio2 one"><label
+                                    for="support-request">Support
+                                    Request</label><br>
+
+                            </section>
+                        </section>
+                        <p class="error"></p><br>
+                    </section>
+
+
+                    <section id="textarea">
+                        <label for="message">message *</label><br>
+                        <textarea name="message" id="message" minlength="15"></textarea><br>
+                        <p class="error messageError"></p><br>
+                    </section>
+                    <section class="consent">
+                        <input type="checkbox" name="consent" value="consent" id="consent"><span>I consent
+                            to being contacted by the team *</span>
+                            <p class="error">To submit this form please consent to being contacted</p>
+                    </section>
+
+                    <button>submit</button>
+
+                </form>
+            </div>
+            <div class="overlay"></div>
+        </div>
+    </div>
+</body>
+
+</html>
