@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --greyishBlue: hsl(240, 78%, 98%);
+    --lightGreyBlue: hsl(234, 14%, 74%);
+    --grayBlu: hsl(233, 13%, 49%);
+    --darkGreyBlue: hsl(232, 13%, 33%);
+    --gradient: linear-gradient(to bottom, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/bg-top.svg), url(./images/bg-bottom.svg);
+    background-position: top, bottom;
+    background-color: var(--greyishBlue);
+    background-repeat: no-repeat;
+    background-position-x: 8rem, 5rem;
+    background-position-y: -2rem, 30rem;
+    background-attachment: fixed;
+    /* background-size: contain; */
+}
+
+#main {
+    text-align: center;
+    padding: 2rem .6rem;
+    min-height: 100vh;
+}
+
+#first>h2 {
+    color: var(--darkGreyBlue);
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+#period {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+#period .time {
+    color: var(--grayBlu);
+    font-size: .9rem;
+    font-weight: 550;
+}
+
+#period .scrollButton {
+    background-color: #8F93EE;
+    padding: 0.15rem;
+    border-radius: 1rem;
+    display: flex;
+    width: 2.5rem;
+    justify-content: flex-end;
+    align-items: center;
+}
+#period .scrollButton:hover{
+    background-color: var(--lightGreyBlue);
+}
+
+#period .scrollButton button {
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+.box {
+    padding: 1rem;
+    margin-bottom: 1.2rem;
+    border-radius: .5rem;
+    width: 15rem;
+    box-shadow: 0 10px 3px 0 var(--greyishBlue);
+}
+
+.box .line {
+    background-color: var(--darkGreyBlue);
+    height: 1px;
+    width: 100%;
+    margin: .5rem 0;
+}
+
+.box h1,
+.box h3 {
+    color: var(--darkGreyBlue);
+    margin-bottom: 1rem;
+}
+
+.box h1 {
+    font-size: 2rem;
+}
+
+.box p {
+    font-size: .8rem;
+    color: var(--darkGreyBlue);
+    font-weight: 550;
+}
+
+.box .yearly {
+    display: none;
+}
+
+.box button {
+    padding: .3rem;
+    width: 100%;
+    border-radius: .3rem;
+    font-weight: 550;
+    border: none;
+    margin: .8rem 0;
+    cursor: pointer;
+}
+
+#basic,
+#master {
+    background-color: white;
+}
+
+
+#basic button,
+#master button {
+    background: var(--gradient);
+    color: white;
+}
+#basic button:hover, #master button:hover{
+    color: #6F73BA;
+    background: initial;
+    border: 1px solid #6F73BA;
+}
+#Professional button:hover{
+    color: white;
+    background: initial;
+    border: 1px solid white;
+}
+
+#Professional {
+    background: var(--gradient);
+}
+
+#Professional .line {
+    background-color: white;
+}
+
+#Professional button {
+    background-color: white;
+    color: #6F73BA;
+}
+
+#Professional h1,
+#Professional h3,
+#Professional p {
+    color: white;
+}
+
+@media (min-width: 401px) {
+    main{
+        /* background-position: top, left; */
+        background-position-x: right, left;
+        background-position-y: -10rem, 22rem;
+    }
+    #second {
+        display: flex;
+        /* justify-content: flex-start; */
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    #first> h2{
+        margin-bottom: 2rem;
+    }
+    #period{
+        margin-bottom: 2.3rem;
+    }
+    #period .scrollButton{
+        padding: .15rem;
+    }
+
+    .box {
+        padding: 1.2rem 1rem;
+        margin-bottom: 1.2rem;
+        border-radius: .5rem;
+        width: 16rem;
+    }
+
+    .box h3 {
+        font-size: .9rem;
+    }
+
+    .box h1 {
+        font-size: 3rem;
+    }
+
+    .box p {
+        font-size: .8rem;
+        font-weight: 550;
+    }
+    .box button{
+        padding: .5rem;
+    }
+
+    #Professional {
+        /* width: 15rem; */
+        height: 21.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
