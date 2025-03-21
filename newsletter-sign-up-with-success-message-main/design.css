@@ -1,0 +1,305 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --darkGrey: hsl(234, 29%, 20%);
+    --charcoalGrey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+}
+
+body {
+    min-height: 60vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--darkGrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+}
+
+#main {
+    background-color: white;
+    max-width: 60rem;
+    border-radius: .5rem;
+    margin: 1rem;
+    flex-shrink: 0;
+}
+
+#main .one img {
+    width: 100%;
+}
+
+#main .two {
+    padding: 2rem 1rem;
+}
+
+.two h1 {
+    color: var(--charcoalGrey);
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.two p {
+    color: var(--darkGrey);
+    font-size: .95rem;
+    line-height: 1.3rem;
+    font-weight: 500;
+}
+
+.two .first-par {
+    margin-bottom: 1.5rem;
+}
+
+.two .updates {
+    margin-bottom: 2rem;
+}
+
+.two img {
+    width: 100%;
+    max-width: 1rem;
+    flex-shrink: 0;
+}
+
+.two .list {
+    display: flex;
+    gap: .9rem;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.email label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: .5rem;
+}
+
+.email #email-label {
+    font-size: .8rem;
+    font-weight: 700;
+    color: var(--charcoalGrey);
+}
+
+.error {
+    display: none;
+}
+
+.showError .error {
+    color: red;
+    font-size: .75rem;
+    font-weight: 550;
+    display: block;
+}
+
+.email .input {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.email #email {
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    border: 1px solid var(--grey);
+    padding: 1rem;
+    font-family: inherit;
+    outline: none;
+}
+
+.inputError {
+    display: none;
+}
+
+.showError .inputError {
+    display: block;
+    position: absolute;
+    color: red;
+    top: .6rem;
+    left: 1rem;
+    font-size: .8rem;
+    pointer-events: none;
+}
+
+.two button {
+    width: 100%;
+    height: 2.5rem;
+    border-radius: .5rem;
+    background-color: var(--darkGrey);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.layout {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--darkGrey);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.confirmation {
+    background-color: white;
+    width: 100%;
+    height: 100vh;
+    padding: 1.5rem;
+    padding-top: 4rem;
+}
+
+.confirmation img {
+    width: 100%;
+    max-width: 3.5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.confirmation h1 {
+    color: var(--charcoalGrey);
+    font-size: 2rem;
+    line-height: 2.3rem;
+    margin-bottom: 1.5rem;
+}
+
+.confirmation p {
+    color: var(--darkGrey);
+    font-weight: 500;
+    line-height: 1.5rem;
+    font-size: .8rem;
+    margin-bottom: 5.5rem;
+}
+
+.confirmation p span {
+    font-weight: 650;
+}
+
+.confirmation button {
+    width: 100%;
+    /* position: absolute; */
+    height: 2.5rem;
+    border-radius: .4rem;
+    outline: none;
+    border: none;
+    background-color: var(--darkGrey);
+    color: white;
+    font-family: inherit;
+    display: block;
+    bottom: 3rem;
+    cursor: pointer;
+    font-weight: 550;
+}
+
+.confirmation button:hover {
+    background-color: hsl(4, 100%, 67%);
+}
+
+
+
+
+
+
+@media (min-width: 400px) {
+    #main {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        min-height: 36rem;
+        padding-top: 1rem;
+        /* gap: 1rem; */
+    }
+
+    .one {
+        flex-shrink: 0;
+    }
+
+    #main .one img {
+        width: 100%;
+        visibility: hidden;
+        /* display: none; */
+
+    }
+
+    #main .one {
+        background-image: url(../assets/images/illustration-sign-up-desktop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        max-width: 35rem;
+        min-height: 32rem;
+        /* height: 35rem; */
+        order: 1;
+    }
+
+    #main .two {
+        flex-shrink: 0;
+        /* width: 50%; */
+        max-width: 30rem;
+        order: 2;
+        padding: 1rem 2rem;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    #main .two h1 {
+        font-size: 3rem;
+    }
+
+    #main .two p {
+        font-size: 1.1rem;
+    }
+
+    .email .input {
+        height: 3rem;
+    }
+
+    .email #email-label {
+        font-size: 1rem;
+    }
+
+    .email .error {
+        font-size: .9rem;
+    }
+
+    .email .inputError {
+        font-size: .9rem;
+        top: .7rem;
+    }
+
+    .two button {
+        height: 3rem;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+
+}
+.confirmation{
+    max-width: 20rem;
+    height: auto;
+    border-radius: .4rem;
+}
+
+@media (min-width: 880px) {
+    #main .one {
+        order: 2;
+        padding: 1rem;
+        padding-right: .3rem;
+        /* padding-top: 2rem; */
+    }
+
+    #main .two {
+        order: 1;
+    }
+}
