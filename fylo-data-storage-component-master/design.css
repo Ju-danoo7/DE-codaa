@@ -1,0 +1,191 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-image: url(images/bg-mobile.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+#main{
+    margin: 2rem;
+}
+
+/*First section*/
+#div-1{
+    background-color: hsl(228, 56%, 26%);
+    padding: 2.3rem 4.5rem 2.3rem 2.2rem;
+    /* display: flex;
+    flex-direction: column;
+    gap: 2rem; */
+    width: 20rem;
+    border-radius: 10px 6rem 10px 10px;
+    margin-bottom: 1rem;
+}
+#folder-apps{
+    display: flex;
+    gap: 1.1rem;
+    margin-top: 2rem;
+    align-items: center;
+}
+#folder-apps span{
+    width: 3rem;
+    height: 2.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(229, 57%, 11%);
+    border-radius: 8px;
+}
+
+/*Second section*/
+#div-2{
+    background-color: hsl(228, 56%, 26%);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 10px;
+    height: 10rem;
+}
+#div-2 p{
+    color: hsl(229, 7%, 55%);
+    font-size: .85rem;
+    margin-bottom: 1rem;
+}
+#div-2 p #lighter{
+    color: hsl(243, 100%, 93%);
+}
+
+#container{
+    background-color: hsl(229, 57%, 11%);
+    height: 1.4rem;
+    border-radius: .7rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: .8rem;
+}
+#pink{
+    background: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+    height: 1.2rem;
+    width: 70%;
+    padding: .2rem;
+    border-radius: .6rem;
+    margin-left: 1px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+#white{
+    background-color: hsl(243, 100%, 93%);
+    width: .8rem;
+    height: .9rem;
+    border-radius: 100%;
+    
+}
+
+#div-2 #whiter{
+    display: flex;
+    justify-content: space-between;
+    color: hsl(243, 100%, 93%);
+    font-weight: 600;
+}
+
+/*div-2 white part*/
+#white-back{
+    background-color: white;
+    width: 10.5rem;
+    /* height: 5rem; */
+    padding: .6rem;
+    position: relative;
+    border-radius: .8rem;
+    left: 2rem;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+}
+#white-back p{
+    font-size: .7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    color: hsl(229, 7%, 55%);
+}
+
+#white-back #big{
+    color: hsl(229, 57%, 11%);
+    font-size: 2rem;
+    font-weight: 800;
+}
+#white-back #big #one{
+    position: relative;
+    font-size: 1.7rem;
+}
+#white-back #big #eight{
+    position: relative;
+    bottom: .2rem;
+}
+#white-back #big #five{
+    position: relative;
+    top: .2rem;
+}
+
+@media (min-width: 750px) {
+    body{
+        background-color: hsl(229, 57%, 11%);
+        background-image: url(images/bg-desktop.png);
+        background-size: contain;
+        background-position-y: 20rem;
+    }
+    #main{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 1.5rem;
+    }
+    #div-1{
+        height: 14rem;
+        position: relative;
+        top: 1rem;
+    }
+    #div-2{
+        width: 33rem;
+        height: 10rem;
+    }
+    #div-2 p{
+        text-align: left;
+    }
+    #white-back{
+        position: relative;
+        left: 18.5rem;
+        bottom: 12rem;
+    }
+      #white-back #ear {
+        /* background-color: white; */
+        position: absolute;
+        top: 3rem;
+        left: 7rem;
+
+        transform: rotate(-90deg);
+        border-left: 2rem solid transparent;
+        border-right: 2rem solid transparent;
+        border-bottom: 3rem solid white;
+        /* border-top-left-radius: px;
+        border-top-right-radius: px;
+        transform: rotate(-90deg);
+        border-left: 35px solid transparent;
+        border-right: 35px solid transparent;
+        border-bottom: 70px solid #5e5e5e; */
+      }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Authour" content="Essien Daniel Emmanuel">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact-me</title>
+    <link rel="stylesheet" href="contact-me.css">
+    <script src="contact-me.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <h1>Contact Me</h1>
+        <form action="#">
+            <div class="input-div">
+                <label for="name">Name *</label>
+                <div class="input-container">
+                    <input type="text" id="name" placeholder="Fill in your name">
+                </div>
+                <p class="error"></p>
+            </div>
+            <div class="input-div">
+                <label for="email">email *</label>
+                <div class="input-container">
+                    <input type="email" id="email" placeholder="Fill in email">
+                </div>
+                <p class="error"></p>
+            </div>
+            <div class="input-div">
+                <label for="phone">Phone *</label>
+                <div class="input-container">
+                    <input type="number" id="phone" placeholder="Fill in phone number">
+                </div>
+                <p class="error"></p>
+            </div>
+            <div class="input-div">
+                <label for="message">message *</label><br>
+                <div class="textarea">
+                    <textarea name="message" id="message" minlength="15" placeholder="Write your message"></textarea>
+                </div>
+                <p class="error">This is required</p>
+            </div>
+            <button class="submit">Submit Form</button>
+        </form>
+        <div class="overlay">
+            <div class="success">
+                <p>Thank you for contacting me. I will hopefully get back to you and be in touch.</p>
+            </div>
+    </div>
+    </main>
+</body>
+
+</html>
